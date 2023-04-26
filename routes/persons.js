@@ -11,6 +11,8 @@ router.get("/gente", async (req, res) => {
 });
 */
 
+//Aqui simplemente vamos a hacer lo mismo que la ruta anterior, es mas mejor la sobrescribimos pero ahora la renderizamos, obiamente como necesitamos aplicar la funcion asincrona
+// encontramos person y lo renderizamos indicandole que es en index y con la informacion de persons la cual la destructuramos con {}
 router.get("/gente", async (req, res) => {
   const Persons = await Person.find({});
   res.render("index", { Persons });
